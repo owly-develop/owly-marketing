@@ -3,442 +3,246 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>OWLY · Marketing Inmersivo — Demo Landing</title>
-<meta name="description" content="Convierte tus presentaciones en un sistema vivo donde el cliente recorre, cotiza y firma." />
+<title>OWLY · Marketing Inmersivo</title>
+<meta name="description" content="El cliente recorre, cotiza y firma. Solo." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%89%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 <style>
-/* ============================================================
-   SISTEMA DE MARCA — extraído de owly.com.co (negro + naranja #ff6200, Poppins)
-   DEMO ESTRUCTURAL para el equipo gráfico. Datos reales del Sales Deck 2026.
-   [ ... ] = placeholder donde van imágenes / video / maqueta reales.
-   ============================================================ */
+/* Marca OWLY (owly.com.co): negro + naranja #ff6200 + Poppins.
+   Estilo de claridad inspirado en gobraven.com: titulares cortos, problema→solución, mucho aire.
+   DEMO ESTRUCTURAL — [ ... ] = placeholder de imagen/video para el equipo gráfico. */
 :root{
-  --bg:#0a0a0a; --surface:#111111; --surface-2:#1a1a1a; --border:#2a2a2a;
-  --text:#f0f0f0; --text-2:#e0e0e0; --muted:#888888; --faint:#555555;
-  --accent:#ff6200; --accent-dark:#cc4e00; --accent-soft:rgba(255,98,0,.12);
-  --r-sm:4px; --r-md:8px; --r-lg:16px; --r-full:9999px;
-  --maxw:1240px; --pad:2rem;
-  --font:"Poppins",sans-serif; --serif:"Times New Roman",Georgia,serif;
+  --bg:#0a0a0a;--surface:#111;--surface-2:#161616;--border:#262626;
+  --text:#f0f0f0;--muted:#8a8a8a;--faint:#555;
+  --accent:#ff6200;--accent-soft:rgba(255,98,0,.1);
+  --r:14px;--maxw:1080px;--font:"Poppins",sans-serif;--mono:"JetBrains Mono",monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
-section{position:relative}
-h1,h2,h3{line-height:1.05;letter-spacing:-.02em;font-weight:700}
-a{color:inherit}
-.serif-it{font-family:var(--serif);font-style:italic;font-weight:400}
-.acc{color:var(--accent)}
-.muted{color:var(--muted)}
+body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.5}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.02;font-weight:700}
+a{color:inherit;text-decoration:none}
+.ey{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;display:block}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#0a0a0a;font-weight:600;font-size:15px;padding:14px 26px;border-radius:99px;transition:.25s}
+.btn:hover{background:#fff;transform:translateY(-2px)}
+.btn.g{background:transparent;color:var(--text);border:1px solid var(--border)}
+.btn.g:hover{background:transparent;border-color:var(--accent);color:var(--accent);transform:none}
+section{padding:clamp(64px,11vw,130px) 0;border-top:1px solid var(--border)}
+.note{background:var(--accent-soft);border-bottom:1px dashed var(--accent);color:var(--accent);font-size:11px;text-align:center;padding:8px;font-family:var(--mono);letter-spacing:.04em}
 
-/* ATMOSPHERE — orange radial glow like the real site */
-.glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(90px);opacity:.5;z-index:0}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:700;font-size:20px;letter-spacing:.04em}.logo span{color:var(--accent)}
 
-/* ---------- NAV ---------- */
-header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:.04em}
-.logo .o{color:var(--accent);font-size:24px}
-.nav{display:flex;gap:28px;font-size:14px;font-weight:500}
-.nav a{color:var(--muted);text-decoration:none;transition:.2s}
-.nav a:hover{color:var(--text)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#0a0a0a;font-weight:600;font-size:14px;padding:12px 22px;border-radius:var(--r-full);text-decoration:none;border:none;cursor:pointer;transition:.25s}
-.btn:hover{background:#fff;transform:translateY(-1px)}
-.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
-.btn.ghost:hover{border-color:var(--accent);background:transparent;color:var(--accent);transform:none}
-@media(max-width:860px){.nav{display:none}}
+/* hero */
+.hero{text-align:center;border-top:none;position:relative;overflow:hidden}
+.hero .glow{position:absolute;width:680px;height:420px;background:var(--accent);filter:blur(120px);opacity:.22;top:-160px;left:50%;transform:translateX(-50%);border-radius:50%;pointer-events:none}
+.hero h1{font-size:clamp(44px,8vw,92px);max-width:13ch;margin:0 auto 24px;position:relative}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero .lead{font-size:clamp(17px,2.4vw,22px);color:var(--muted);font-weight:300;margin-bottom:38px}
+.hero .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.media{margin-top:60px}
+.ph{border:1.5px dashed #333;border-radius:var(--r);background:#0e0e0e;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;color:var(--faint);text-align:center;padding:30px;min-height:140px}
+.ph b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase}
+.ph.tall{min-height:380px}.ph .ico{font-size:30px;opacity:.6}
 
-/* ---------- HERO ---------- */
-.hero{padding:clamp(70px,11vw,140px) 0 80px;text-align:center;overflow:hidden}
-.hero .glow{width:760px;height:520px;background:var(--accent);top:-180px;left:50%;transform:translateX(-50%);opacity:.28}
-.kicker{display:inline-block;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);border:1px solid var(--border);background:var(--surface);padding:8px 18px;border-radius:var(--r-full);margin-bottom:30px;position:relative;z-index:1}
-.hero h1{font-size:clamp(38px,6.5vw,78px);max-width:15ch;margin:0 auto 26px;position:relative;z-index:1}
-.hero h1 .serif-it{color:var(--accent)}
-.hero p.sub{font-size:clamp(17px,2.2vw,21px);color:var(--text-2);max-width:60ch;margin:0 auto 18px;position:relative;z-index:1;font-weight:300}
-.hero .micro{color:var(--muted);font-size:14px;max-width:54ch;margin:0 auto 36px;position:relative;z-index:1}
-.hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
-.hero .mock{margin:60px auto 0;max-width:980px;position:relative;z-index:1}
+/* big centered statement */
+.center{text-align:center}
+.center h2{font-size:clamp(30px,5.5vw,60px);max-width:16ch;margin:0 auto}
+.center h2 em{color:var(--accent);font-style:normal}
+.center p{color:var(--muted);font-size:18px;font-weight:300;margin-top:18px}
 
-/* image / media placeholders for the graphic team */
-.ph{border:1.5px dashed #3a3a3a;border-radius:var(--r-lg);background:linear-gradient(135deg,#141414,#0e0e0e);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--faint);text-align:center;padding:28px;min-height:160px}
-.ph .tag{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.ph .desc{font-size:13px;color:var(--muted);max-width:40ch}
-.ph .ico{font-size:28px;opacity:.6}
-.ph.tall{min-height:420px}
+/* trust numbers */
+.nums{display:flex;justify-content:center;gap:clamp(28px,7vw,90px);flex-wrap:wrap;text-align:center}
+.nums .n{font-size:clamp(40px,6vw,60px);font-weight:800;color:var(--accent);line-height:1}
+.nums .l{color:var(--muted);font-size:14px;margin-top:8px}
 
-/* ---------- generic section head ---------- */
-.shead{text-align:center;max-width:64ch;margin:0 auto 50px}
-.shead .lbl{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px}
-.shead h2{font-size:clamp(28px,4.2vw,46px);margin-bottom:16px}
-.shead p{color:var(--muted);font-size:16px}
-.pad{padding:clamp(60px,9vw,110px) 0}
-.pad-t{border-top:1px solid var(--border)}
+/* problem -> flip */
+.flips{display:grid;gap:18px;margin-top:10px}
+.flip{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+@media(max-width:680px){.flip{grid-template-columns:1fr}}
+.flip>div{padding:28px 30px;background:var(--bg)}
+.flip .bad{background:var(--surface)}
+.flip .tag{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;display:block}
+.flip .bad .tag{color:var(--faint)} .flip .good .tag{color:var(--accent)}
+.flip h3{font-size:22px;margin-bottom:6px}
+.flip p{color:var(--muted);font-size:14px;font-weight:300}
+.flip .good{background:linear-gradient(120deg,var(--accent-soft),var(--bg))}
+.flip .good h3{color:var(--accent)}
 
-/* ---------- STATS ---------- */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:760px){.stats{grid-template-columns:1fr}}
-.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:34px 30px;text-align:center;transition:.25s}
-.stat:hover{border-color:var(--accent);transform:translateY(-3px)}
-.stat .big{font-size:clamp(44px,6vw,64px);font-weight:800;color:var(--accent);line-height:1}
-.stat .t{font-weight:600;margin:12px 0 6px;font-size:17px}
-.stat .d{color:var(--muted);font-size:14px}
-
-/* ---------- PROBLEM (3 fugas) ---------- */
-.fugas{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:860px){.fugas{grid-template-columns:1fr}}
-.fuga{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px;position:relative;overflow:hidden}
-.fuga .num{font-family:var(--serif);font-style:italic;font-size:52px;color:var(--faint);line-height:1}
-.fuga h3{font-size:21px;margin:8px 0 12px}
-.fuga p{color:var(--muted);font-size:14.5px;margin-bottom:18px}
-.fuga .res{font-size:12px;letter-spacing:.06em;font-weight:600;color:var(--accent);border-top:1px solid var(--border);padding-top:14px}
-.bigline{text-align:center;font-size:clamp(22px,3.4vw,34px);font-weight:300;max-width:24ch;margin:54px auto 0;line-height:1.25}
-.bigline b{font-weight:700;color:var(--accent)}
-
-/* ---------- COST TABLE ---------- */
-.cost{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden}
-@media(max-width:760px){.cost{grid-template-columns:1fr}}
-.cost .col{padding:34px}
-.cost .col.a{background:var(--surface)}
-.cost .col.b{background:linear-gradient(160deg,rgba(255,98,0,.1),var(--surface));border-left:1px solid var(--border)}
-.cost h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
-.cost .col.a h4{color:var(--muted)} .cost .col.b h4{color:var(--accent)}
-.cost .row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border);font-size:15px}
-.cost .row:last-child{border-bottom:none}
-.cost .row b{font-weight:700}
-.cost .col.b .row b{color:var(--accent)}
-.delta{margin-top:24px;text-align:center;background:var(--accent);color:#0a0a0a;font-weight:700;padding:18px;border-radius:var(--r-md);font-size:clamp(15px,2vw,19px)}
-
-/* ---------- CAPABILITIES ---------- */
+/* capabilities row */
 .caps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-@media(max-width:980px){.caps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.caps{grid-template-columns:1fr}}
-.cap{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px 22px;transition:.25s}
-.cap:hover{border-color:var(--accent);background:var(--surface-2)}
-.cap .n{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.1em}
-.cap h3{font-size:18px;margin:14px 0 10px}
-.cap p{color:var(--muted);font-size:13.5px}
+@media(max-width:820px){.caps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.caps{grid-template-columns:1fr}}
+.cap{border:1px solid var(--border);border-radius:var(--r);padding:24px 20px;transition:.2s}
+.cap:hover{border-color:var(--accent);background:var(--surface)}
+.cap .nn{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.cap h3{font-size:17px;margin-top:14px}
 
-/* ---------- JOURNEY ---------- */
-.journey{display:grid;grid-template-columns:repeat(6,1fr);gap:0;counter-reset:j}
-@media(max-width:900px){.journey{grid-template-columns:repeat(2,1fr);gap:16px}}
-.jstep{padding:24px 18px;border-left:1px solid var(--border);position:relative}
-.jstep:first-child{border-left:none}
-@media(max-width:900px){.jstep{border-left:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md)}}
-.jstep .time{font-size:12px;color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums}
-.jstep h4{font-size:15px;margin:10px 0 8px}
-.jstep p{font-size:12.5px;color:var(--muted)}
-.jstep .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-bottom:14px;box-shadow:0 0 12px var(--accent)}
-.jres{margin-top:30px;text-align:center;font-size:clamp(17px,2.4vw,24px);font-weight:300;line-height:1.4}
+/* journey */
+.jrow{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;text-align:center}
+@media(max-width:760px){.jrow{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:430px){.jrow{grid-template-columns:repeat(2,1fr)}}
+.jr .t{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.jr h4{font-size:14px;margin-top:8px}
+.jres{text-align:center;font-size:clamp(20px,3.2vw,30px);font-weight:300;margin-top:46px;line-height:1.3}
 .jres b{color:var(--accent);font-weight:700}
 
-/* ---------- DIFFERENCE TABLE ---------- */
-.diff{width:100%;border-collapse:collapse;font-size:14px;border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden}
-.diff th,.diff td{padding:15px 16px;text-align:center;border-bottom:1px solid var(--border)}
-.diff th:first-child,.diff td:first-child{text-align:left;font-weight:500}
-.diff thead th{background:var(--surface-2);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
-.diff thead th.own{color:var(--accent)}
-.diff td.own{background:var(--accent-soft);color:var(--accent);font-weight:700}
-.diff tbody tr:hover{background:rgba(255,255,255,.02)}
-.diff .x{color:var(--faint)}
-.diff-wrap{overflow-x:auto}
+/* results */
+.res{display:flex;justify-content:center;gap:clamp(24px,6vw,72px);flex-wrap:wrap;text-align:center}
+.res .v{font-size:clamp(38px,6vw,58px);font-weight:800;color:var(--accent);line-height:1}
+.res .l{color:var(--muted);font-size:13.5px;margin-top:8px;max-width:16ch}
 
-/* ---------- RESULTS ---------- */
-.results{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-@media(max-width:760px){.results{grid-template-columns:repeat(2,1fr)}}
-.rcard{text-align:center;padding:30px 18px;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--surface)}
-.rcard .v{font-size:clamp(34px,5vw,50px);font-weight:800;color:var(--accent);line-height:1}
-.rcard .l{color:var(--muted);font-size:13.5px;margin-top:12px}
+/* logos */
+.logos{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:40px}
+@media(max-width:760px){.logos{grid-template-columns:repeat(4,1fr)}}
+.logos div{border:1px solid var(--border);border-radius:8px;padding:16px 6px;color:var(--faint);font-size:12px;text-transform:capitalize;text-align:center}
 
-/* ---------- PROOF ---------- */
-.proof{text-align:center}
-.proofnums{font-size:clamp(18px,2.6vw,26px);font-weight:300;margin-bottom:40px}
-.proofnums b{color:var(--accent);font-weight:700}
-.logos{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
-@media(max-width:900px){.logos{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:520px){.logos{grid-template-columns:repeat(3,1fr)}}
-.logos div{border:1px solid var(--border);border-radius:var(--r-md);padding:18px 6px;color:var(--faint);font-size:12px;text-transform:capitalize;background:var(--surface)}
-
-/* ---------- PILOT / OFFER ---------- */
-.pilot{background:linear-gradient(155deg,rgba(255,98,0,.14),var(--surface));border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(36px,6vw,64px);position:relative;overflow:hidden}
-.pilot .glow{width:480px;height:380px;background:var(--accent);bottom:-220px;right:-120px;opacity:.3}
-.pilot-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;position:relative;z-index:1}
-@media(max-width:760px){.pilot-grid{grid-template-columns:1fr;gap:28px}}
-.pilot h2{font-size:clamp(28px,4vw,42px);margin-bottom:18px}
-.pilot ol{list-style:none;counter-reset:p;display:grid;gap:14px}
-.pilot ol li{counter-increment:p;display:flex;gap:14px;font-size:15px}
-.pilot ol li::before{content:counter(p);background:var(--accent);color:#0a0a0a;font-weight:700;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;flex:none;font-size:13px}
-.cond{background:rgba(0,0,0,.35);border:1px solid var(--border);border-radius:var(--r-md);padding:24px}
-.cond .crow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
-.cond .crow:last-child{border-bottom:none}
-.cond .crow span:last-child{color:var(--accent);font-weight:600}
-
-/* ---------- FINAL CTA ---------- */
+/* final */
 .final{text-align:center}
-.final .q{font-family:var(--serif);font-style:italic;font-size:clamp(24px,4vw,42px);max-width:22ch;margin:0 auto 36px;line-height:1.25}
-.final .q b{color:var(--accent);font-style:normal}
-.contact{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:30px;color:var(--muted);font-size:15px}
-.contact a{color:var(--text);text-decoration:none;font-weight:500}
+.final h2{font-size:clamp(30px,5vw,56px);max-width:18ch;margin:0 auto 36px}
+.final h2 em{color:var(--accent);font-style:normal}
+.contact{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:15px}
 .contact a:hover{color:var(--accent)}
-
-/* ---------- FOOTER ---------- */
-footer{border-top:1px solid var(--border);padding:40px 0;color:var(--faint);font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
-
-/* note banner for the graphic team */
-.note{background:var(--accent-soft);border:1px dashed var(--accent);color:var(--accent);font-size:13px;text-align:center;padding:12px;font-weight:500}
+footer{border-top:1px solid var(--border);padding:26px 0;color:var(--faint);font-size:12px;text-align:center}
 </style>
 </head>
 <body>
 
-<!-- NOTA PARA EL EQUIPO GRÁFICO (eliminar en producción) -->
-<div class="note">DEMO ESTRUCTURAL · marca tomada de owly.com.co (negro + #ff6200 + Poppins) · datos reales del Sales Deck 2026 · los bloques [ ... ] son placeholders para imágenes/video/maqueta</div>
+<div class="note">DEMO ESTRUCTURAL · marca owly.com.co (negro + #ff6200 + Poppins) · estilo claridad gobraven · [ ... ] = placeholder de imagen/video</div>
 
-<header>
-  <div class="wrap">
-    <div class="logo"><span class="o">🦉</span> OWLY</div>
-    <nav class="nav">
-      <a href="#problema">El problema</a>
-      <a href="#solucion">La solución</a>
-      <a href="#como">Cómo funciona</a>
-      <a href="#diferencia">Diferencia</a>
-      <a href="#piloto">Piloto</a>
-    </nav>
-    <a href="#contacto" class="btn">Agendar diagnóstico</a>
-  </div>
-</header>
+<header><div class="wrap">
+  <div class="logo">🦉 OWLY</div>
+  <a href="#contacto" class="btn" style="padding:11px 22px;font-size:14px">Agendar diagnóstico</a>
+</div></header>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="glow"></div>
-  <div class="wrap">
-    <span class="kicker">Marketing Inmersivo · Preventa Inmobiliaria</span>
-    <h1>Convierte tus presentaciones en un <span class="serif-it">sistema vivo</span> donde el cliente recorre, cotiza y firma.</h1>
-    <p class="sub">Maqueta virtual + motor de ventas con IA + portal del cliente, en una sola capa. El cliente recorre, decide y firma; tu equipo cierra, no explica.</p>
-    <p class="micro">El problema no es la demanda. Es la fricción entre interés y firma.</p>
-    <div class="cta-row">
-      <a href="#contacto" class="btn">Agendar diagnóstico gratis</a>
-      <a href="#como" class="btn ghost">Ver cómo funciona →</a>
-    </div>
-    <div class="mock">
-      <div class="ph tall">
-        <span class="ico">🎬</span>
-        <span class="tag">Hero — Maqueta virtual 360°</span>
-        <span class="desc">Video/loop de la maqueta interactiva navegando del edificio a una unidad disponible. Lo más impactante arriba.</span>
-      </div>
-    </div>
+<section class="hero"><div class="glow"></div><div class="wrap">
+  <span class="ey">Marketing Inmersivo · Preventa</span>
+  <h1>El cliente recorre, cotiza y <em>firma</em>. Solo.</h1>
+  <p class="lead">Maqueta + IA + portal, en una sola capa.</p>
+  <div class="row">
+    <a href="#contacto" class="btn">Agendar diagnóstico</a>
+    <a href="#sistema" class="btn g">Ver cómo →</a>
   </div>
-</section>
+  <div class="media"><div class="ph tall"><span class="ico">🎬</span><b>Maqueta 360° — video hero</b></div></div>
+</div></section>
 
-<!-- CONTEXT STATS -->
-<section class="pad pad-t">
-  <div class="wrap">
-    <div class="shead">
-      <div class="lbl">El comprador ya cambió</div>
-      <h2>Tu cliente ya es digital. ¿Tu preventa también?</h2>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="big">73%</div><div class="t">empieza en digital</div><div class="d">Antes de pisar sala ya vio 4–6 proyectos online. La primera impresión la da tu web.</div></div>
-      <div class="stat"><div class="big">5 min</div><div class="t">ventana de respuesta</div><div class="d">Tras 5 minutos sin contacto, la conversión cae 80%. La mayoría responde al día siguiente.</div></div>
-      <div class="stat"><div class="big">6+</div><div class="t">herramientas por asesor</div><div class="d">WhatsApp, Excel, formularios, cotizadores, CRM, drive. Cada salto pierde contexto y velocidad.</div></div>
-    </div>
-  </div>
-</section>
+<!-- TRUST -->
+<section><div class="wrap nums">
+  <div><div class="n">+100</div><div class="l">constructoras</div></div>
+  <div><div class="n">9</div><div class="l">países</div></div>
+  <div><div class="n">+900</div><div class="l">renders</div></div>
+  <div><div class="n">7</div><div class="l">años</div></div>
+</div></section>
 
-<!-- PROBLEM -->
-<section id="problema" class="pad pad-t">
-  <div class="wrap">
-    <div class="shead">
-      <div class="lbl">El problema</div>
-      <h2>Dónde se pierden las ventas</h2>
-      <p>Tres fugas silenciosas entre el clic y la firma.</p>
-    </div>
-    <div class="fugas">
-      <div class="fuga"><div class="num">01</div><h3>Fuga de comprensión</h3><p>El cliente ve un PDF, un render aislado. No entiende qué compra.</p><div class="res">→ Se enfría antes de cotizar</div></div>
-      <div class="fuga"><div class="num">02</div><h3>Fuga de tiempo</h3><p>Cotización manual en Excel, días de espera por un plan de pagos.</p><div class="res">→ La venta la cierra el competidor</div></div>
-      <div class="fuga"><div class="num">03</div><h3>Fuga de seguimiento</h3><p>El lead llega el domingo 9pm; le contestan el lunes 10am.</p><div class="res">→ 80% de leads sin segunda interacción</div></div>
-    </div>
-    <p class="bigline">El asesor recibió <b>47 leads fríos</b>, no 1 pre-cualificado. Y cerró en 4 visitas, no en 1.</p>
-  </div>
-</section>
+<!-- ONE-LINE PROBLEM -->
+<section class="center"><div class="wrap">
+  <span class="ey">El problema</span>
+  <h2>No es la demanda. Es la <em>fricción</em>.</h2>
+  <p>El comprador ya recorrió tu proyecto el domingo a las 9pm. ¿Contigo o con tu competencia?</p>
+</div></section>
 
-<!-- COST -->
-<section class="pad pad-t">
-  <div class="wrap">
-    <div class="shead">
-      <div class="lbl">El costo</div>
-      <h2>Qué te cuesta hoy</h2>
-      <p>Ejemplo típico — proyecto de 180 unidades, 600 leads/mes (Meta + Web).</p>
+<!-- PROBLEM -> FLIP -->
+<section><div class="wrap">
+  <span class="ey">Dónde se pierden las ventas</span>
+  <div class="flips">
+    <div class="flip">
+      <div class="bad"><span class="tag">Hoy</span><h3>Tarda días en cotizar</h3><p>Excel, esperas, llamadas.</p></div>
+      <div class="good"><span class="tag">Con OWLY</span><h3>Cotiza en segundos</h3><p>Plan de pagos en pantalla.</p></div>
     </div>
-    <div class="cost">
-      <div class="col a">
-        <h4>Sin OWLY</h4>
-        <div class="row"><span>Leads / mes</span><b>600</b></div>
-        <div class="row"><span>% que cotiza online</span><b>~6%</b></div>
-        <div class="row"><span>Cotizaciones efectivas</span><b>36</b></div>
-        <div class="row"><span>Cierres potenciales</span><b>2–3</b></div>
-      </div>
-      <div class="col b">
-        <h4>Con OWLY</h4>
-        <div class="row"><span>Leads / mes</span><b>600</b></div>
-        <div class="row"><span>% que cotiza online</span><b>~25%</b></div>
-        <div class="row"><span>Cotizaciones efectivas</span><b>150</b></div>
-        <div class="row"><span>Cierres potenciales</span><b>8–10</b></div>
-      </div>
+    <div class="flip">
+      <div class="bad"><span class="tag">Hoy</span><h3>Responden mañana</h3><p>El 80% no tiene 2ª interacción.</p></div>
+      <div class="good"><span class="tag">Con OWLY</span><h3>IA responde en &lt;1 min</h3><p>24/7, multicanal.</p></div>
     </div>
-    <div class="delta">Delta mensual: +5 ventas adicionales ≈ ~$900M extra ≈ 12× el costo de OWLY al mes</div>
-    <p class="muted" style="text-align:center;font-size:12.5px;margin-top:16px">*Cifras de referencia del sector. Las reales se calibran en el diagnóstico inicial.</p>
+    <div class="flip">
+      <div class="bad"><span class="tag">Hoy</span><h3>47 leads fríos</h3><p>El asesor explica lo mismo.</p></div>
+      <div class="good"><span class="tag">Con OWLY</span><h3>1 lead listo</h3><p>Cierra en 1 visita, no 4.</p></div>
+    </div>
   </div>
-</section>
+</div></section>
 
-<!-- SOLUTION + CAPABILITIES -->
-<section id="solucion" class="pad pad-t">
-  <div class="wrap">
-    <div class="shead">
-      <div class="lbl">La solución</div>
-      <h2>Un sistema vivo, no un PDF</h2>
-      <p>Cinco capacidades que cubren del primer clic a la postventa.</p>
-    </div>
-    <div class="caps">
-      <div class="cap"><div class="n">01</div><h3>Maqueta virtual</h3><p>Recorrido 360° del proyecto, unidad por unidad.</p></div>
-      <div class="cap"><div class="n">02</div><h3>Inventario en vivo</h3><p>Estado comercial: disponible, separada, no disponible.</p></div>
-      <div class="cap"><div class="n">03</div><h3>Motor de ventas IA</h3><p>Calificación predictiva y seguimiento 24/7 multicanal.</p></div>
-      <div class="cap"><div class="n">04</div><h3>Cotización online</h3><p>Plan de pagos en segundos, sin esperar al asesor.</p></div>
-      <div class="cap"><div class="n">05</div><h3>Portal del cliente</h3><p>Avance de obra, pagos, documentos y chat.</p></div>
-    </div>
-    <div style="margin-top:34px" class="ph tall">
-      <span class="ico">🖥️</span>
-      <span class="tag">Demo del producto</span>
-      <span class="desc">Capturas/loops reales: maqueta + cotizador embebido + inventario en vivo + portal. Una imagen ancla por capacidad.</span>
-    </div>
+<!-- SYSTEM / CAPABILITIES -->
+<section id="sistema"><div class="wrap">
+  <span class="ey">La solución</span>
+  <h2 style="font-size:clamp(28px,4.6vw,48px);max-width:14ch;margin-bottom:44px">Un sistema vivo, no un PDF.</h2>
+  <div class="caps">
+    <div class="cap"><span class="nn">01</span><h3>Maqueta 360°</h3></div>
+    <div class="cap"><span class="nn">02</span><h3>Inventario vivo</h3></div>
+    <div class="cap"><span class="nn">03</span><h3>Motor IA 24/7</h3></div>
+    <div class="cap"><span class="nn">04</span><h3>Cotización online</h3></div>
+    <div class="cap"><span class="nn">05</span><h3>Portal del cliente</h3></div>
   </div>
-</section>
+  <div style="margin-top:30px" class="ph tall"><span class="ico">🖥️</span><b>Demo del producto — maqueta + cotizador + portal</b></div>
+</div></section>
 
-<!-- HOW IT WORKS / JOURNEY -->
-<section id="como" class="pad pad-t">
-  <div class="wrap">
-    <div class="shead">
-      <div class="lbl">Cómo se ve operando</div>
-      <h2>Del primer clic a la firma</h2>
-      <p>Una historia real de un domingo por la noche.</p>
-    </div>
-    <div class="journey">
-      <div class="jstep"><div class="dot"></div><div class="time">DOM 9:42pm</div><h4>Click en Meta Ad</h4><p>La pareja ve el anuncio en Instagram.</p></div>
-      <div class="jstep"><div class="dot"></div><div class="time">9:43pm</div><h4>Recorre la maqueta</h4><p>Entran al sitio y navegan el proyecto en 360°.</p></div>
-      <div class="jstep"><div class="dot"></div><div class="time">9:51pm</div><h4>Cotizan la unidad 308</h4><p>Plan de pagos en pantalla, sin pedir nada.</p></div>
-      <div class="jstep"><div class="dot"></div><div class="time">9:52pm</div><h4>IA agenda visita</h4><p>WhatsApp: "¿Te visitamos el martes 10am?"</p></div>
-      <div class="jstep"><div class="dot"></div><div class="time">MARTES</div><h4>Asesor cierra</h4><p>Llegan informados. Reservan en 30 min.</p></div>
-      <div class="jstep"><div class="dot"></div><div class="time">+30 DÍAS</div><h4>Portal activo</h4><p>Ven avance de obra, pagan cuotas, sin pings.</p></div>
-    </div>
-    <p class="jres">El asesor recibió <b>1 lead pre-cualificado, no 47 fríos</b>. Cerró en <b>1 visita, no en 4</b>.</p>
+<!-- JOURNEY -->
+<section><div class="wrap">
+  <span class="ey">Del clic a la firma</span>
+  <div class="jrow">
+    <div class="jr"><div class="t">DOM 9:42</div><h4>Click en Meta Ad</h4></div>
+    <div class="jr"><div class="t">9:43</div><h4>Recorre maqueta</h4></div>
+    <div class="jr"><div class="t">9:51</div><h4>Cotiza el 308</h4></div>
+    <div class="jr"><div class="t">9:52</div><h4>IA agenda visita</h4></div>
+    <div class="jr"><div class="t">MARTES</div><h4>Cierra</h4></div>
+    <div class="jr"><div class="t">+30 DÍAS</div><h4>Portal activo</h4></div>
   </div>
-</section>
+  <p class="jres">1 lead listo, no <b>47 fríos</b>. 1 visita, no <b>4</b>.</p>
+</div></section>
 
-<!-- DIFFERENCE -->
-<section id="diferencia" class="pad pad-t">
-  <div class="wrap">
-    <div class="shead">
-      <div class="lbl">Por qué no hay comparables</div>
-      <h2>Esto no es un CRM. Es un sistema vertical de preventa.</h2>
-    </div>
-    <div class="diff-wrap">
-      <table class="diff">
-        <thead><tr>
-          <th>Capacidad</th><th>CRM Genérico</th><th>CRM Local</th><th>Tour 360° solo</th><th class="own">OWLY</th>
-        </tr></thead>
-        <tbody>
-          <tr><td>Maqueta virtual con cotización embebida</td><td class="x">—</td><td class="x">—</td><td class="x">—</td><td class="own">✓</td></tr>
-          <tr><td>Inventario inmobiliario nativo</td><td class="x">—</td><td>parcial</td><td class="x">—</td><td class="own">✓</td></tr>
-          <tr><td>IA conversacional 24/7 multicanal</td><td class="x">—</td><td class="x">—</td><td>parcial</td><td class="own">✓</td></tr>
-          <tr><td>Portal del cliente post-firma</td><td class="x">—</td><td>parcial</td><td class="x">—</td><td class="own">✓</td></tr>
-          <tr><td>Implementación &lt; 4 semanas</td><td>add-on</td><td class="x">—</td><td class="x">—</td><td class="own">✓</td></tr>
-          <tr><td>Soporte en español, equipo en LATAM</td><td class="x">—</td><td>✓</td><td class="x">—</td><td class="own">✓</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="muted" style="text-align:center;font-size:12.5px;margin-top:14px">CRM Genérico: HubSpot, Salesforce · CRM Local: Wasi, Sienna · Tour 360°: Matterport, agencias</p>
-  </div>
-</section>
+<!-- DIFFERENCE one-liner -->
+<section class="center"><div class="wrap">
+  <span class="ey">Por qué no hay comparables</span>
+  <h2>Esto no es un <em>CRM</em>.</h2>
+  <p>Es un sistema vertical de preventa. Implementación &lt; 4 semanas.</p>
+</div></section>
 
 <!-- RESULTS -->
-<section class="pad pad-t">
-  <div class="wrap">
-    <div class="shead">
-      <div class="lbl">Resultados esperados</div>
-      <h2>En tu primer proyecto, 90 días</h2>
-    </div>
-    <div class="results">
-      <div class="rcard"><div class="v">3–4×</div><div class="l">cotizaciones online vs. baseline sin maqueta</div></div>
-      <div class="rcard"><div class="v">−60%</div><div class="l">tiempo del asesor explicando lo mismo</div></div>
-      <div class="rcard"><div class="v">&lt;1m</div><div class="l">tiempo de respuesta fuera de horario</div></div>
-      <div class="rcard"><div class="v">+25%</div><div class="l">tasa lead → visita por pre-calificación IA</div></div>
-    </div>
-    <p class="muted" style="text-align:center;font-size:12.5px;margin-top:18px">Rangos de implementaciones tempranas. Cada proyecto recibe un baseline propio en las primeras 2 semanas.</p>
+<section><div class="wrap">
+  <span class="ey">Primer proyecto · 90 días</span>
+  <div class="res" style="margin-top:20px">
+    <div><div class="v">3–4×</div><div class="l">cotizaciones online</div></div>
+    <div><div class="v">−60%</div><div class="l">tiempo del asesor</div></div>
+    <div><div class="v">&lt;1m</div><div class="l">tiempo de respuesta</div></div>
+    <div><div class="v">+25%</div><div class="l">lead → visita</div></div>
   </div>
-</section>
+</div></section>
 
 <!-- PROOF -->
-<section class="pad pad-t">
-  <div class="wrap proof">
-    <div class="shead"><div class="lbl">Respaldo</div><h2>+109 constructoras ya confían en OWLY</h2></div>
-    <p class="proofnums"><b>+100</b> constructoras activas en <b>9 países</b> · <b>+900</b> renders entregados · <b>+103</b> proyectos inmersivos finalizados</p>
-    <div class="logos">
-      <div>arboleda</div><div>belmonte</div><div>bonita golf</div><div>boscco</div><div>botánico</div><div>coral lake</div><div>corozalito</div>
-      <div>domus</div><div>elite</div><div>galia</div><div>ika</div><div>kasa</div><div>nodo</div><div>serena blue</div>
-    </div>
-    <p class="muted" style="font-size:12px;margin-top:14px">[ Reemplazar cada celda con el logo SVG del cliente ]</p>
+<section class="center"><div class="wrap">
+  <span class="ey">Respaldo</span>
+  <h2 style="font-size:clamp(26px,4vw,44px)">+109 constructoras ya confían.</h2>
+  <div class="logos">
+    <div>arboleda</div><div>belmonte</div><div>bonita golf</div><div>boscco</div><div>botánico</div><div>coral lake</div><div>domus</div>
+    <div>elite</div><div>galia</div><div>ika</div><div>kasa</div><div>nodo</div><div>serena blue</div><div>ventto</div>
   </div>
-</section>
+  <p style="color:var(--faint);font-size:11px;margin-top:14px;font-family:var(--mono)">[ logos SVG reales ]</p>
+</div></section>
 
 <!-- PILOT -->
-<section id="piloto" class="pad pad-t">
-  <div class="wrap">
-    <div class="pilot">
-      <div class="glow"></div>
-      <div class="pilot-grid">
-        <div>
-          <h2>Propuesta de arranque: <span class="acc">Piloto 90 días</span></h2>
-          <ol>
-            <li>Elegimos UN proyecto en venta activa (ideal: pre-lanzamiento o arranque de etapa).</li>
-            <li>Lanzamos Maqueta + Motor IA en 30 días — equipo capacitado, sitio integrado, Meta + WhatsApp conectados.</li>
-            <li>Medimos vs. tu baseline — 2 reviews mensuales con cifras propias del proyecto.</li>
-            <li>Decisión a los 90 días: si la aguja se movió, expansión; si no, salida limpia.</li>
-          </ol>
-        </div>
-        <div class="cond">
-          <div class="crow"><span>Riesgo</span><span>Bajo</span></div>
-          <div class="crow"><span>Duración</span><span>90 días</span></div>
-          <div class="crow"><span>Setup</span><span>Incluido</span></div>
-          <div class="crow"><span>Permanencia</span><span>Sin permanencia</span></div>
-          <div class="crow"><span>Tus datos</span><span>Exportables</span></div>
-          <div style="margin-top:22px"><a href="#contacto" class="btn" style="width:100%;justify-content:center">Quiero mi diagnóstico</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="center"><div class="wrap">
+  <span class="ey">Arranque</span>
+  <h2 style="font-size:clamp(28px,4.6vw,50px);max-width:13ch;margin:0 auto">Piloto de <em>90 días</em>. Bajo riesgo.</h2>
+  <p>1 proyecto · setup incluido · sin permanencia · salida limpia.</p>
+</div></section>
 
-<!-- FINAL CTA / CONTACT -->
-<section id="contacto" class="pad pad-t final">
-  <div class="wrap">
-    <p class="q">"El cliente que te visita el martes ya recorrió tu proyecto el <b>domingo a las 9pm</b>. La pregunta es si lo recorrió contigo, o con tu competencia."</p>
-    <a href="mailto:pablo@owly.com.co" class="btn" style="font-size:16px;padding:16px 32px">Agendar diagnóstico (2h, gratis)</a>
-    <div class="contact">
-      <span>✉ <a href="mailto:pablo@owly.com.co">pablo@owly.com.co</a></span>
-      <span>✆ <a href="https://wa.me/573016488851">+57 301 648 8851</a></span>
-      <span>🌐 <a href="https://owly.com.co">www.owly.com.co</a></span>
-    </div>
+<!-- FINAL CTA -->
+<section id="contacto" class="final"><div class="wrap">
+  <span class="ey">Empecemos</span>
+  <h2>¿Lo recorrió contigo, o con tu <em>competencia</em>?</h2>
+  <a href="mailto:pablo@owly.com.co" class="btn" style="font-size:16px;padding:16px 34px">Agendar diagnóstico (gratis)</a>
+  <div class="contact">
+    <a href="mailto:pablo@owly.com.co">pablo@owly.com.co</a>
+    <a href="https://wa.me/573016488851">+57 301 648 8851</a>
+    <a href="https://owly.com.co">owly.com.co</a>
   </div>
-</section>
+</div></section>
 
-<footer>
-  <div class="wrap">
-    <span>© OWLY S.A.S · Marketing Inmersivo</span>
-    <span>Habeas Data (Ley 1581 + Dec. 1377) · WhatsApp Business API · AWS 99.9% uptime</span>
-  </div>
-</footer>
+<footer>© OWLY S.A.S · Habeas Data · WhatsApp Business API · AWS 99.9% uptime</footer>
 
 </body>
 </html>
