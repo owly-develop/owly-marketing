@@ -24,6 +24,9 @@ desktop.ini
 *.mp4
 *.avi
 
+# Claude Code (config local de la herramienta)
+.claude/
+
 # Secretos / credenciales
 .env
 .env.local
