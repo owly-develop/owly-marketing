@@ -1,0 +1,31 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temporales
+*.tmp
+.tmp/
+~$*
+
+# Archivos pesados de trabajo (mantener en Drive/almacenamiento, no en git)
+*.psd
+*.ai
+*.sketch
+*.fig
+# Videos en bruto
+*.mov
+*.mp4
+*.avi
+
+# Secretos / credenciales
+.env
+.env.local
+*.key
+secrets/
