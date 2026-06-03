@@ -32,3 +32,7 @@ desktop.ini
 .env.local
 *.key
 secrets/
+
+# Artefactos de previsualización (screenshots de QA)
+.playwright-mcp/
+/owly-dashboard.png
