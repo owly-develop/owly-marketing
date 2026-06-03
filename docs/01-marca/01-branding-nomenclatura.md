@@ -6,11 +6,19 @@
 
 ## Identidad de marca
 
-- **Nombre**: OWLY
-- **Dominio**: owlysales.ai
-- **Tagline**: Sales Platform
-- **Descripción**: Plataforma integral de ventas con inteligencia artificial.
+- **Nombre**: OWLY · **Razón social**: OWLY S.A.S (Colombia)
 - **Logo / símbolo**: 🦉 (búho — inteligencia, visión nocturna = insights, sabiduría).
+- **Descripción**: Plataforma integral de ventas inmobiliarias con IA / Marketing inmersivo.
+
+### ⚠️ Discrepancia de marca a resolver (dos fuentes activas)
+
+| Atributo | Doc. de producto (`owly-sales-ecosystem`) | Sales deck 2026 (vigente) |
+|----------|-------------------------------------------|---------------------------|
+| **Tagline** | "Sales Platform" | "Marketing Inmersivo" |
+| **Dominio** | owlysales.ai | owly.com.co |
+| **Contacto** | business@owlylabs.com | pablo@owly.com.co · +57 301 648 8851 |
+
+Ambas fuentes **coinciden en el anti-posicionamiento de CRM**. La discrepancia de tagline/dominio **debe definirla el usuario**. Por defecto, para el go-to-market comercial actual usamos lo del deck 2026 (`owly.com.co`, "Marketing Inmersivo") por ser la pieza más reciente y orientada a venta. _Owly: confirma cuál es el oficial._
 
 ---
 

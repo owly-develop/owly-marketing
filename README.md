@@ -29,9 +29,10 @@ docs/
 │   └── 03-producto-features.md
 ├── 01-marca/           # Identidad, branding, tono y nomenclatura
 │   └── 01-branding-nomenclatura.md
-├── 02-estrategia/      # Posicionamiento y go-to-market
+├── 02-estrategia/      # Posicionamiento, go-to-market, propuesta comercial
 │   ├── 01-posicionamiento.md
-│   └── 02-go-to-market.md
+│   ├── 02-go-to-market.md
+│   └── 03-propuesta-comercial-2026.md   # ⭐ destilación del sales deck oficial
 ├── 03-audiencia/       # Buyer personas e ICP
 │   └── 01-buyer-personas.md
 ├── 04-competencia/     # Análisis competitivo
@@ -40,8 +41,16 @@ docs/
 │   └── README.md
 ├── 06-canales/         # Canales: redes, ads, SEO, email
 │   └── README.md
+├── 07-ventas/          # Sales enablement (pitch, objeciones, playbooks)
+│   ├── 01-pitch-narrativa.md
+│   ├── 02-objeciones.md
+│   └── 03-caso-ancla-playbook.md        # prompts para construir el 1er caso
 └── 09-metricas/        # KPIs y resultados
     └── README.md
+
+assets/
+└── decks/
+    └── OWLY-Propuesta-Comercial-2026.pdf  # sales deck oficial (32 slides)
 ```
 
 ---
