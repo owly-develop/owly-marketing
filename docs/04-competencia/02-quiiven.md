@@ -88,10 +88,40 @@ Categorías: Análisis de datos · IA · Noticias · Resultados tangibles · Sec
 
 ---
 
-## 7. Pendiente
+## 7. Instagram — @quiiven.inmobiliario
 
-- [ ] Analizar Instagram, LinkedIn y Facebook de Quiiven (el usuario compartirá usuarios/links o screenshots).
-- [ ] Ver categorías del blog a fondo si vamos a competir en SEO.
+**Perfil**: 2.048 seguidores · 677 seguidos · **352 publicaciones** · bio: *"Somos el mejor aliado para cumplir tus metas de ventas inmobiliarias 🚀🌱 Vende más, el que compite mejor. 📍Estamos en 10 países."* Highlights: Eventos · Ventas · Tips · Marketing · Contacto.
+
+> 📊 **Lectura**: mucho volumen (352 posts) pero alcance modesto (2K seguidores). **Consistencia alta, engagement bajo** → publican mucho pero no despegan. Confirma la oportunidad: con mejor contenido (video de maqueta) los superamos.
+
+### 🚨 Hallazgo grande: venden EXACTAMENTE nuestro mismo dolor
+Sus posts de mayor frecuencia atacan el mismo problema del deck de OWLY:
+- *"Las ventas no se pierden al final del proceso… se pierden en los **tiempos de respuesta, el seguimiento y la falta de estructura**."* ← son nuestras 3 fugas.
+- *"Muchos equipos creen que necesitan más leads, cuando en realidad están perdiendo oportunidades todos los días."*
+- *"No es tu equipo el problema, es tu proceso. Lo que no se controla, se pierde."*
+- *"Los equipos que más venden no improvisan: método, proceso y métricas."*
+
+> **Mismo dolor, distinta solución.** Quiiven lo resuelve con **servicios + proceso + Pipedrive**. OWLY lo resuelve con **producto: maqueta + IA + portal**. Podemos usar sus mismos ganchos y **rematar con producto visual** (ellos no tienen maqueta que mostrar — nosotros sí).
+
+### Pilares de contenido que detectamos
+| Pilar | Ejemplos | Para qué les sirve |
+|-------|----------|--------------------|
+| **Dolor / "verdades incómodas"** | "no necesitas más leads, necesitas mejor proceso" | enganchar a gerentes |
+| **Eventos / Masterclass paga** | Masterclass Comercial $500.000+IVA (Bogotá, Santa Marta), Congreso de Vivienda | leads + ingreso + autoridad |
+| **IA / tendencia** | ProptechLatam: "Vender o desaparecer: metodología con IA" | posicionarse moderno |
+| **Cultura / employer branding** | "Mundial Quiiven", #SomosQuiiven | reclutar asesores (+700) |
+| **Test / diagnóstico** | "¿Sabes en qué etapa pierdes clientes? Te ayudamos a verlo" | captar leads |
+
+**Tono**: directo y confrontacional, preguntas, emoji 💛 (amarillo de marca), CTA "escríbenos / conversemos".
+**Hashtags fijos**: #VentasInmobiliarias #EquiposComerciales #CRM #Leads #Conversión #MarketingInmobiliario #Inmobiliarias #RealEstate #Proptech #Quiiven.
+
+---
+
+## 8. Pendiente
+
+- [x] Instagram (@quiiven.inmobiliario) — hecho.
+- [ ] LinkedIn y Facebook de Quiiven (compartir links/usuarios).
+- [ ] Ver categorías del blog a fondo si competimos en SEO.
 
 ---
 

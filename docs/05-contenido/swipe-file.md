@@ -29,6 +29,22 @@
 
 ---
 
+## Ganchos de Instagram de Quiiven (mismo dolor → rematamos con producto)
+
+Quiiven publica estos ganchos y le funcionan como enganche. Nosotros los usamos **y cerramos mostrando la maqueta** (algo que ellos no tienen):
+
+| Gancho de Quiiven | Nuestro remate (con producto) |
+|-------------------|-------------------------------|
+| "Las ventas se pierden en tiempos de respuesta y seguimiento" | …por eso la IA de OWLY responde en <1 min, 24/7. *(video del WhatsApp 9:52pm)* |
+| "No necesitas más leads, necesitas mejor proceso" | …necesitas que el lead se cotice solo. *(maqueta + cotizador embebido)* |
+| "¿Sabes en qué etapa pierdes clientes?" | OWLY te muestra el engagement real: tiempo en maqueta, unidades vistas. |
+| "Los equipos que más venden no improvisan" | …tienen una maqueta que vende mientras duermen. |
+| Masterclass / evento pago | Webinar GRATIS "El comprador de las 9pm" + demo de maqueta en vivo. |
+
+**Formatos a copiar de su molde**: posts de "verdad incómoda" + pregunta, carruseles de tips, contenido de evento. **Formato donde los aplastamos**: reel de maqueta 360° (visual puro).
+
+---
+
 ## Reglas de estilo (borrador)
 
 - Tono: experto pero directo; nada de jerga vacía. (Ver `01-marca`.)
