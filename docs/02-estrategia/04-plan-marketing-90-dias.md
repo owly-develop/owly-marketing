@@ -107,4 +107,42 @@ KPIs base (sin costo de medición): seguidores/engagement LinkedIn, demos agenda
 
 ---
 
-🔗 Relacionado: `03-propuesta-comercial-2026.md` · `01-posicionamiento.md` · `../07-ventas/03-caso-ancla-playbook.md` · Dashboard: `/app/index.html`
+## 7. El sistema operativo (cómo trabajamos)
+
+Este plan se ejecuta con el **Método de Crecimiento** → `05-metodo-crecimiento.md`. En corto: cada idea entra como **experimento con hipótesis y métrica**, revisión **semanal**, foco en **métricas de input** (lo controlable), y todo documentado en el repo.
+
+---
+
+## 8. Qué integramos — filtro "ahora sí / después"
+
+De todo lo que investigamos (Quiiven, Growth Method, etc.), esto es lo que **sirve para tu etapa** y lo que **es ruido por ahora**:
+
+| ✅ AHORA (mueve la aguja) | 🕓 DESPUÉS (cuando haya tracción/presupuesto) |
+|---------------------------|----------------------------------------------|
+| Activar la **base caliente** (+100 clientes) con la oferta piloto | Ads pagados (Google/Meta) |
+| **Caso ancla** con datos reales (`07-ventas/03`) | Blog/SEO a escala (98 artículos como Growth Method) |
+| **Video de maqueta 360°** en LinkedIn/IG (ventaja vs Quiiven) | Masterclass pagas (modelo Quiiven) |
+| Landing con **1 objetivo + form** (ya hecho) | Atribución avanzada (Markov, etc.) |
+| **Input metrics** + revisión semanal | Marketplace / contenido horizontal |
+| Mensaje **"potencia al asesor"** + anti-CRM | Volverse "plataforma de marketing genérica" |
+
+> Regla: **vertical y caliente primero.** Lo frío y horizontal puede esperar.
+
+---
+
+## 9. Backlog de experimentos — arranque
+
+Primeros experimentos (formato del método: hipótesis → métrica). Detalle en `05-metodo-crecimiento.md`.
+
+| # | Hipótesis | Métrica (output) | Input controlable | Esfuerzo |
+|---|-----------|------------------|-------------------|----------|
+| E1 | Si escribimos a 20 clientes de visualización con la oferta piloto, agendamos 3 diagnósticos | diagnósticos | 20 mensajes enviados | Medio |
+| E2 | Si publicamos 1 reel de maqueta 360°/semana, generamos demanda inbound que Quiiven no puede igualar | visitas a landing / demos | 4 reels/mes | Medio |
+| E3 | Si sacamos el caso ancla con datos reales, subimos la conversión de las demos | % demo→piloto | 1 caso publicado | Alto |
+| E4 | Si el fundador postea 3×/semana la narrativa "9pm/3 fugas", crecemos audiencia de decisores | seguidores / engagement | 12 posts/mes | Bajo |
+
+> Empezar por **E1 y E4** (bajo costo, base caliente + autoridad). Medir 2 semanas, quedarse con lo que funciona.
+
+---
+
+🔗 Relacionado: `05-metodo-crecimiento.md` · `03-propuesta-comercial-2026.md` · `01-posicionamiento.md` · `../04-competencia/02-quiiven.md` · `../07-ventas/03-caso-ancla-playbook.md` · Dashboard: `/app/index.html`
