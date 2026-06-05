@@ -121,8 +121,17 @@ header .inner{margin:14px auto 0;max-width:var(--maxw);width:calc(100% - 40px);d
 .final-card{border-radius:28px;padding:clamp(40px,7vw,80px) 28px}
 .final h2{font-size:clamp(30px,5vw,56px);max-width:18ch;margin:0 auto 36px}
 .final h2 em{color:var(--accent);font-style:normal}
-.contact{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:15px}
+.contact{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:14px}
 .contact a:hover{color:var(--accent-deep)}
+/* form */
+.lead-form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:540px;margin:6px auto 0}
+.lead-form input{flex:1;min-width:190px;padding:15px 20px;border-radius:99px;font:inherit;font-size:15px;color:var(--text);background:rgba(255,255,255,.6);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--glass-brd);outline:none;transition:.2s}
+.lead-form input::placeholder{color:var(--faint)}
+.lead-form input:focus{border-color:var(--accent);background:rgba(255,255,255,.85)}
+.lead-form button{flex:none;border:none;cursor:pointer}
+.form-ok{display:none;font-size:18px;font-weight:600;color:var(--accent-deep);padding:14px 0}
+.form-ok.show{display:block}
+.subnote{color:var(--muted);font-size:14px;font-weight:300;margin:4px 0 22px}
 footer{padding:26px 0;color:var(--faint);font-size:12px;text-align:center;position:relative;z-index:1}
 </style>
 </head>
@@ -246,19 +255,47 @@ footer{padding:26px 0;color:var(--faint);font-size:12px;text-align:center;positi
   </div>
 </div></section>
 
-<!-- FINAL CTA -->
+<!-- FINAL CTA + FORM -->
 <section id="contacto" class="final"><div class="wrap"><div class="final-card glass">
   <span class="ey">Empecemos</span>
-  <h2>¿Lo recorrió contigo, o con tu <em>competencia</em>?</h2>
-  <a href="mailto:pablo@owly.com.co" class="btn" style="font-size:16px;padding:16px 34px">Agendar diagnóstico (gratis)</a>
+  <h2>Agenda tu <em>diagnóstico</em>. 2h, gratis.</h2>
+  <p class="subnote">Vemos tu pipeline y te entregamos un baseline propio. Sin compromiso.</p>
+  <form class="lead-form" id="leadForm">
+    <input id="f-nombre" name="nombre" required placeholder="Tu nombre" autocomplete="name" />
+    <input id="f-wa" name="whatsapp" required placeholder="WhatsApp (+57...)" inputmode="tel" autocomplete="tel" />
+    <button class="btn" type="submit" style="font-size:16px;padding:15px 30px">Agendar diagnóstico</button>
+  </form>
+  <div class="form-ok" id="formOk">✓ ¡Listo! Te contactamos en menos de 24h.</div>
   <div class="contact">
+    <a href="https://wa.me/573016488851" id="waFallback">o escríbenos por WhatsApp</a>
     <a href="mailto:pablo@owly.com.co">pablo@owly.com.co</a>
-    <a href="https://wa.me/573016488851">+57 301 648 8851</a>
-    <a href="https://owly.com.co">owly.com.co</a>
   </div>
 </div></div></section>
 
 <footer>© OWLY S.A.S · Habeas Data · WhatsApp Business API · AWS 99.9% uptime</footer>
+
+<script>
+/* ===== Lead form → app/CRM OWLY =====
+   Equipo OWLY: pega el endpoint del CRM en API_ENDPOINT. Vacío = modo demo (no envía). */
+const API_ENDPOINT = "";
+const WA_NUMBER = "573016488851";
+function getUTM(){const p=new URLSearchParams(location.search);return{source:p.get('utm_source')||'',medium:p.get('utm_medium')||'',campaign:p.get('utm_campaign')||''};}
+document.getElementById('leadForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const nombre=document.getElementById('f-nombre').value.trim();
+  const whatsapp=document.getElementById('f-wa').value.trim();
+  if(!nombre||!whatsapp) return;
+  const payload={nombre,whatsapp,fuente:'landing-owlysales',url:location.href,utm:getUTM()};
+  try{
+    if(API_ENDPOINT){ await fetch(API_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); }
+    else{ console.log('[demo] lead capturado:',payload); }
+  }catch(err){ console.warn('envío falló, fallback WhatsApp',err); }
+  document.getElementById('leadForm').style.display='none';
+  document.getElementById('formOk').classList.add('show');
+  const msg=encodeURIComponent(`Hola, soy ${nombre}. Quiero agendar el diagnóstico de OWLY.`);
+  document.getElementById('waFallback').href=`https://wa.me/${WA_NUMBER}?text=${msg}`;
+});
+</script>
 
 </body>
 </html>
